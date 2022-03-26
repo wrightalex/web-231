@@ -4,12 +4,12 @@
 </head>
  <body>
       <h1>Exercise 2.2 - Hello Javascript</h1>
-<p id="btnMyCourse">What course am I taking?</p>
- <button type="button" onclick="myFunction()">What course am I taking?</button>
-  <script>
-   function myFunction() {
-   document.createElement("btnmycourse").innerHTML = "WEB 231 – Enterprise JavaScript I.";
-}
+let btn = document.createElement("btnMyCourse");
+btn.innerHTML = "What course am I taking?";
+btn.onclick = function () {
+  alert("WEB 231 – Enterprise JavaScript I");
+};
+document.body.appendChild(btn);
 </script>
 </body>
 
