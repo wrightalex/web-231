@@ -11,6 +11,22 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="Wrighttemp-conversion.css">
+        <script>
+        function ConvertToCelsius() {
+            //1. Get user input from input box with Id farenheit
+            var fahrenheit = document.getElementById("txtfahrenheit").value;
+            //2. Store user input in variable txtfarenheit
+           
+            //3. Use fahrenheit to Celsius formula
+            //4. Store result in Variable txtcelcius 
+            var celcius = (parseFloat(fahrenheit-32) / 1.8).toFixed(2);
+            //5. Select card title div and change innerhtml with txtcelcius
+            document.getElementById("card-title").innerHTML = celcius;
+
+            
+        
+    }
+        </script>
     </head>
     <body>
         <h1 class="app-header">Welcome to the 
@@ -18,14 +34,9 @@
             <h1 class="card-title">Fahrenheit to 
                 Celsius Converter</h1>
                 <label for="txtfahrenheit">Fahrenheit value:</label>
-                <input type="text" id="Fahrenheit value:" 
-                Name="txtfahrenheit">
-                  <button onclick="document.getElementById
-                  (“fahrenheitvalue”).onclick 
-                  ()">Convert Temperature</button>
-                   <var>fahrenheit = txtfahrenheit;</var>
-                     ((parseFloat(fahrenheit-32) / 1.8).toFixed(2);
-                   <h1 class="card-title">Conversion Results</h1>
+                <input type="text" id="txtfahrenheit">
+                  <button onclick=ConvertToCelsius()>Convert Temperature</button>
+                   <h1 class="card-title" id="card-title">Conversion Results</h1>
                 <a href="https://wrightalex.github.io/web-231/" 
                 class="return-home">Return</a>
     </body>
