@@ -1,0 +1,69 @@
+<!--
+; Title: Assignment 5.2
+; Author: Alex Wright
+; Date: 21 March 2022
+; Modified By: -
+; Description: This program creates a sequence game.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            function SequenceGame() {
+                
+                var choice = document.getElementById("sequence").value;
+                var resultsElement = document.getElementById("card-title"); // binds to results
+                var result = "";
+
+                if (choice == "fibonacci")  {
+                    let num1 = 0;  
+                    let num2 = 1;
+                    let next;
+                    while (num1 < 40) {
+                        result += num1 + ", ";  // creates a fibonacci sequence
+                        next = num1 + num2;
+                        num1 = num2;
+                        num2 = next;                       
+                    }
+                } else if (choice == "even")  {
+                    let num3 = 0;
+                    do  {   
+                        result += num3 + ", ";
+                        num3 = num3 + 2
+                    }  while (num3 < 20);    // creates an even number pattern
+                } else if (choice == "odd") {      // creates an odd number pattern
+                    for (num4 = 1; num4 < 20; num4 = num4 + 2)  {    
+                        result += num4 + ", ";  
+                }   }   
+                
+                resultsElement.innerHTML = result; //updates page
+                resultsElement.innerHTML = result.slice(0,-2) //removes extra comma and space
+
+                
+
+               
+                  
+            
+               
+        
+        
+            }
+               </script>
+        </head>
+        <body>
+        <h1 class="app-header">Welcome to the sequence game!</h1>
+        <h1>Sequence Selection Form</h1>
+        <label for="sequence">Choose a number sequence</label>
+        <select id="sequence" class="drop-down-menu">
+            <option value="select">--Select--<body>
+            <option value="fibonacci">Fibonacci Sequence</option>
+            <option value="even">Even Numbers</option>
+            <option value="odd">Odd Numbers</option>
+            <input type="button" id="sequence">
+        <button onclick=SequenceGame() id="btnDisplaySequence">Display Sequence</button>
+        <h1 class="card-title" id="card-title">Sequence Results</h1>
+        <a href="https://wrightalex.github.io/web-231/" class="return-home">Return</a>
+            </body>
+    </head>
+</html>
