@@ -1,0 +1,161 @@
+<!--
+; Title: Assignment 5.2
+; Author: Alex Wright
+; Date: 21 March 2022
+; Modified By: -
+; Description: This program creates a sequence game.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="in-n-out-books.css">
+        <script>
+            function Library()  {
+           let book1 = {
+               isbn:"189204",
+                title:"Wizard's First Rule",
+                pages: "860"
+            };
+           let book2 = {
+                isbn:"445431",
+                title:"Girl Interrupted",
+                pages:"189"
+            };
+           let book3 = {
+                isbn:"100943",
+                title:"Winnie the Pooh",
+                pages:"110"
+            };
+            let author1 = {
+                name:"Terry Goodkind",
+                genre:"Fantasy"
+            }
+            let author2 = {
+                name:"Susanna Kaysen",
+                genre:"Memoir"
+            }
+            let author3 = {
+                name:"A. A. Milne",
+                genre:"Children's"
+            }
+            
+
+            let choice = document.getElementById("favoriteList").value;
+            let FavoriteAuthors = document.getElementById("favorite-authors");
+            let FavoriteBooks = document.getElementById("favorite-books");
+
+            if (choice == "books")  {
+                FavoriteAuthors.style.display = "none";
+                FavoriteBooks.style.display = "block";
+
+                var Variable1 = document.getElementById("txtWizardsFirstRuleISBN");
+                var Variable2 = document.getElementById("txtWizardsFirstRuleTitle");
+                var Variable3 = document.getElementById("txtWizardsFirstRulePages");
+
+                var Variable4 = document.getElementById("txtGirlInterruptedISBN");
+                var Variable5 = document.getElementById("txtGirlInterruptedTitle");
+                var Variable6 = document.getElementById("txtGirlInterruptedPages");
+
+                var Variable7 = document.getElementById("txtWinnieThePoohISBN");
+                var Variable8 = document.getElementById("txtWinnieThePoohTitle");
+                var Variable9 = document.getElementById("txtWinnieThePoohPages");
+
+                Variable1.innerHTML = book1.isbn;
+                Variable2.innerHTML = book1.title;
+                Variable3.innerHTML = book1.pages;
+                
+                Variable4.innerHTML = book2.isbn;
+                Variable5.innerHTML = book2.title;
+                Variable6.innerHTML = book2.pages;
+
+                Variable7.innerHTML = book3.isbn;
+                Variable8.innerHTML = book3.title;
+                Variable9.innerHTML = book3.pages;
+            }
+            if (choice == "authors")  {
+                FavoriteAuthors.style.display = "block";
+                FavoriteBooks.style.display = "none";
+
+                var Variable10 = document.getElementById("txtTerryGoodKindAuthor");
+                var Variable11 = document.getElementById("txtFantasyGenre");
+
+                var Variable12 = document.getElementById("txtSusannaKaySenAuthor");
+                var Variable13 = document.getElementById("txtMemoirGenre");
+
+                var Variable14 = document.getElementById("txtAAMilneAuthor");
+                var Variable15 = document.getElementById("txtChildrensGenre");
+                
+                Variable10.innerHTML = author1.name;
+                Variable11.innerHTML = author1.genre;
+
+                Variable12.innerHTML = author2.name;
+                Variable13.innerHTML = author2.genre;
+
+                Variable14.innerHTML = author3.name;
+                Variable15.innerHTML = author3.genre;
+            }
+            if (choice == "select")  {
+                FavoriteBooks.style.display = "none";
+                FavoriteAuthors.style.display = "none";
+               
+            }
+        }
+            </script>
+    </head>
+    <body>
+        <h1 class="app-header">Welcome to In-N-Out-Books</h1>
+        <h1 class="card-title">My Favorites</h1>
+        <label="favoriteList">Choose a listing</label>
+          <select id="favoriteList" class="drop-down-menu">
+            <option value="select">--Select--</option>
+            <option value="books">Top 3 Favorite Books</option>
+            <option value="authors">Top 3 Favorite Authors</option></select>
+            <input type="button" id="favoriteList">
+              <button onclick=Library() id="btnDisplayListing">Display Listing</button>
+              <a href="https://wrightalex.github.io/web-231/" class="return-home">Return</a>
+               <table id="favorite-books">
+              <tr>
+                    <caption>Top 3 Favorite Books</caption>
+                  <th>ISBN</th>
+                  <th>Title</th>
+                  <th>Pages</th>
+                </tr>
+                <tr>
+                  <td id="txtWizardsFirstRuleISBN"></td>
+                  <td id="txtWizardsFirstRuleTitle"></td>
+                  <td id="txtWizardsFirstRulePages"></td>
+                </tr>
+                <tr>
+                  <td id="txtGirlInterruptedISBN"></td>
+                  <td id="txtGirlInterruptedTitle"></td>
+                  <td id="txtGirlInterruptedPages"></td>
+                </tr>
+                <tr>
+                    <td id="txtWinnieThePoohISBN"></td>
+                    <td id="txtWinnieThePoohTitle"></td>
+                    <td id="txtWinnieThePoohPages"></td>
+                  </tr>
+              </table>
+              <table id="favorite-authors">
+                <tr>
+                    <caption>Top 3 Favorite Authors</caption>
+                  <th>Name</th>
+                  <th>Genre</th>
+                </tr>
+                <tr>
+                  <td id="txtTerryGoodKindAuthor"></td>
+                  <td id="txtFantasyGenre"></td>
+                </tr>
+                <tr>
+                  <td id="txtSusannaKaySenAuthor"></td>
+                  <td id="txtMemoirGenre"></td>
+                </tr>
+                <tr>
+                    <td id="txtAAMilneAuthor"></td>
+                    <td id="txtChildrensGenre"></td>
+                  </tr>
+              </table>
+
+            </body>
+</html>
