@@ -1,0 +1,361 @@
+<!--
+; Title: Assignment 7.2
+; Author: Alex Wright
+; Date: 25 April 2022
+; Modified By: -
+; Description: This program creates a Javazon app.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="wrightjavazon.css">
+        <script>
+            function Case()  {
+            class Product  {
+                constructor (id, description, price, quantity, totalValue)  {
+                    this.id = id
+                    this.description = description
+                    this.price = price
+                    this.quantity = quantity
+                    this.totalValue = (quantity * price)
+                                        } 
+            }
+                     HTMLProduct = new Product(id="17811", description="HTML & CSS",
+                                          price="22.26", quantity="10", totalValue="222.60")
+                    JavaScriptProduct = new Product(id="18229", description="Javascript",
+                                                price="41.33", quantity="7", totalValue="289.31")
+                    DesignProduct = new Product(id="22343", description="Design", price="25.99",
+                                            quantity="3", totalValue="77.97")
+                    ExpressProduct = new Product(id="5464", description="Express", price="34.91",
+                                             quantity="3", totalValue="104.73")
+                    MongoProduct = new Product(id="1114", description="Mongo", price="33.70",
+                                            quantity="8", totalValue="269.60")         
+            class Services  {
+                constructor (id, description, hourlyRate, min)  {
+                    this.id = id
+                    this.description = description
+                    this.hourlyRate = hourlyRate
+                    this.min = min
+                }     
+                    
+            } 
+                    WebsiteServices = new Services(id="109", description="Website", hourlyRate="150.00",
+                                               min="25")
+                    DevOpsServices = new Services(id="111", description="DevOps", hourlyRate="125.00",
+                                              min="50")
+                    DatabaseServices = new Services(id="103", description="Database", hourlyRate="125.00",
+                                                min="15")
+            class Employee {
+                constructor (id, firstName, lastName, salary)  {
+                    this.id = id
+                    this.firstName = firstName
+                    this.lastName = lastName
+                    this.salary = salary
+            }
+                    
+            }
+                    BeethovenEmployee = new Employee(id="1", lastName="Beethoven", firstName="Ludwig",
+                                                 salary="13.99")
+                    BachEmployee = new Employee(id="2", lastName="Bach", firstName="Johann",
+                                            salary="22.30")
+                    MozartEmployee = new Employee(id="3", lastName="Mozart", firstName="Wolfgang",
+                                              salary="19.50")
+                    BrahmsEmployee = new Employee(id="4", lastName="Brahms", firstName="Johannes",
+                                              salary="12.00")
+                    HaydnEmployee = new Employee(id="5", lastName="Haydn", firstName="Joseph",
+                                             salary="32.50")
+            let choice = document.getElementById("listing").value;
+            let TheProducts = document.getElementById("the-products");
+            let TheServices = document.getElementById("the-services");
+            let TheEmployees = document.getElementById("the-employees")
+
+            switch(choice)  {        
+                case "products":
+                    TheProducts.style.display = "block";
+                    TheServices.style.display = "none";
+                    TheEmployees.style.display = "none";
+
+                    var Variable1 = document.getElementById("BeId");
+                    var Variable2 = document.getElementById("BeDescription");
+                    var Variable3 = document.getElementById("BePrice");
+                    var Variable4 = document.getElementById("BeQuantity");
+                    var Variable5 = document.getElementById("Be");
+
+                    var Variable6 = document.getElementById("Id2");
+                    var Variable7 = document.getElementById("Description2");
+                    var Variable8 = document.getElementById("Price2");
+                    var Variable9 = document.getElementById("Quantity2");
+                    var Variable10 = document.getElementById("Be2");
+
+                    var Variable11 = document.getElementById("Id3");
+                    var Variable12 = document.getElementById("Description3");
+                    var Variable13 = document.getElementById("Price3");
+                    var Variable14 = document.getElementById("Quantity3");
+                    var Variable15 = document.getElementById("Be3");
+
+                    var Variable16 = document.getElementById("Id4");
+                    var Variable17 = document.getElementById("Description4");
+                    var Variable18 = document.getElementById("Price4");
+                    var Variable19 = document.getElementById("Quantity4");
+                    var Variable20 = document.getElementById("Be4");
+
+                    var Variable21 = document.getElementById("Id5");
+                    var Variable22 = document.getElementById("Description5");
+                    var Variable23 = document.getElementById("Price5");
+                    var Variable24 = document.getElementById("Quantity5");
+                    var Variable25 = document.getElementById("Be5");
+                
+                    Variable1.innerHTML = HTMLProduct.id;
+                    Variable2.innerHTML = HTMLProduct.description;
+                    Variable3.innerHTML = HTMLProduct.price;
+                    Variable4.innerHTML = HTMLProduct.quantity;
+                    Variable5.innerHTML = HTMLProduct.totalValue;
+
+                    Variable6.innerHTML = JavaScriptProduct.id;
+                    Variable7.innerHTML = JavaScriptProduct.description;
+                    Variable8.innerHTML = JavaScriptProduct.price;
+                    Variable9.innerHTML = JavaScriptProduct.quantity;
+                    Variable10.innerHTML = JavaScriptProduct.totalValue;
+
+                    Variable11.innerHTML = DesignProduct.id;
+                    Variable12.innerHTML = DesignProduct.description;
+                    Variable13.innerHTML = DesignProduct.price;
+                    Variable14.innerHTML = DesignProduct.quantity;
+                    Variable15.innerHTML = DesignProduct.totalValue;
+
+                    Variable16.innerHTML = ExpressProduct.id;
+                    Variable17.innerHTML = ExpressProduct.description;
+                    Variable18.innerHTML = ExpressProduct.price;
+                    Variable19.innerHTML = ExpressProduct.quantity;
+                    Variable20.innerHTML = ExpressProduct.totalValue;
+
+                    Variable21.innerHTML = MongoProduct.id;
+                    Variable22.innerHTML = MongoProduct.description;
+                    Variable23.innerHTML = MongoProduct.price;
+                    Variable24.innerHTML = MongoProduct.quantity;
+                    Variable25.innerHTML = MongoProduct.totalValue;
+
+                
+
+                    break;
+                case "services":
+                    TheProducts.style.display = "none";
+                    TheServices.style.display = "block";
+                    TheEmployees.style.display = "none";
+
+                    var Variable46 = document.getElementById("BeServiceID");
+                    var Variable47 = document.getElementById("BeServicesDescription");
+                    var Variable48 = document.getElementById("BeRate");
+                    var Variable49 = document.getElementById("BeMin");
+
+                    var Variable50 = document.getElementById("ServiceID2");
+                    var Variable51 = document.getElementById("ServicesDescription2");
+                    var Variable52 = document.getElementById("Rate2");
+                    var Variable53 = document.getElementById("Min2");
+
+                    var Variable54 = document.getElementById("ServiceID3");
+                    var Variable55 = document.getElementById("ServicesDescription3");
+                    var Variable56 = document.getElementById("Rate3");
+                    var Variable57 = document.getElementById("Min3");
+                    
+                    Variable46.innerHTML = WebsiteServices.id;
+                    Variable47.innerHTML = WebsiteServices.description;
+                    Variable48.innerHTML = WebsiteServices.hourlyRate;
+                    Variable49.innerHTML = WebsiteServices.min;
+
+                    Variable50.innerHTML = DevOpsServices.id;
+                    Variable51.innerHTML = DevOpsServices.description;
+                    Variable52.innerHTML = DevOpsServices.hourlyRate;
+                    Variable53.innerHTML = DevOpsServices.min;
+
+                    Variable54.innerHTML = DatabaseServices.id;
+                    Variable55.innerHTML = DatabaseServices.description;
+                    Variable56.innerHTML = DatabaseServices.hourlyRate;
+                    Variable57.innerHTML = DatabaseServices.min;
+                    
+                    break;
+                case "employees": 
+                    TheProducts.style.display = "none";
+                    TheServices.style.display = "none";
+                    TheEmployees.style.display = "block";
+
+                    var Variable26 = document.getElementById("BeEmployeeID");
+                    var Variable27 = document.getElementById("BeLast");
+                    var Variable28 = document.getElementById("BeFirst");
+                    var Variable29 = document.getElementById("BeSalary");
+
+                    var Variable30 = document.getElementById("EmployeeID2");
+                    var Variable31 = document.getElementById("Last2");
+                    var Variable32 = document.getElementById("First2");
+                    var Variable33 = document.getElementById("Salary2");
+
+                    var Variable34 = document.getElementById("EmployeeID3");
+                    var Variable35 = document.getElementById("Last3");
+                    var Variable36 = document.getElementById("First3");
+                    var Variable37 = document.getElementById("Salary3");
+
+                    var Variable38 = document.getElementById("EmployeeID4");
+                    var Variable39 = document.getElementById("Last4");
+                    var Variable40 = document.getElementById("First4");
+                    var Variable41 = document.getElementById("Salary4");
+
+                    var Variable42 = document.getElementById("EmployeeID5");
+                    var Variable43 = document.getElementById("Last5");
+                    var Variable44 = document.getElementById("First5");
+                    var Variable45 = document.getElementById("Salary5");
+
+                    Variable26.innerHTML = BeethovenEmployee.id;
+                    Variable27.innerHTML = BeethovenEmployee.lastName;
+                    Variable28.innerHTML = BeethovenEmployee.firstName;
+                    Variable29.innerHTML = BeethovenEmployee.salary;
+
+                    Variable30.innerHTML = BachEmployee.id;
+                    Variable31.innerHTML = BachEmployee.lastName;
+                    Variable32.innerHTML = BachEmployee.firstName;
+                    Variable33.innerHTML = BachEmployee.salary;
+
+                    Variable34.innerHTML = MozartEmployee.id;
+                    Variable35.innerHTML = MozartEmployee.lastName;
+                    Variable36.innerHTML = MozartEmployee.firstName;
+                    Variable37.innerHTML = MozartEmployee.salary;
+
+                    Variable38.innerHTML = BrahmsEmployee.id;
+                    Variable39.innerHTML = BrahmsEmployee.lastName;
+                    Variable40.innerHTML = BrahmsEmployee.firstName;
+                    Variable41.innerHTML = BrahmsEmployee.salary;
+        
+                    Variable42.innerHTML = HaydnEmployee.id;
+                    Variable43.innerHTML = HaydnEmployee.lastName;
+                    Variable44.innerHTML = HaydnEmployee.firstName;
+                    Variable45.innerHTML = HaydnEmployee.salary;
+               }
+                   
+
+            }
+        
+        </script>
+    </head>
+    <body>
+        <h1 class="app header">Welcome to the Javazon App!</h1>
+        <h1>Javazon Selection Form</h1> 
+        <label="listing">Choose a listing</label=>
+        <select id="listing" class="drop-down-menu">
+            <option value="select">--Select--</option>
+            <option value="products">Products</option>
+            <option value="services">Services</option>
+            <option value="employees">Employees</option></select>
+            <button onclick=Case() id="btnDisplayListing">Display Listing</button>
+        <table id="the-products">            <tr>
+            <a href="https://wrightalex.github.io/web-231/" class="return-home">Return</a>
+                  <caption>Javazon Products</caption>
+                <th>Product ID</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total Value</th>
+              </tr>
+              <tr>
+              <td id="BeId"></td>
+              <td id="BeDescription"></td>
+              <td id="BePrice"></td>
+              <td id="BeQuantity"></td>
+              <td id="Be"></td>
+            </tr>
+            <tr>
+                <td id="Id2"></td>
+                <td id="Description2"></td>
+                <td id="Price2"></td>
+                <td id="Quantity2"></td>
+                <td id="Be2"></td>
+              </tr>
+              <tr>
+                <td id="Id3"></td>
+                <td id="Description3"></td>
+                <td id="Price3"></td>
+                <td id="Quantity3"></td>
+                <td id="Be3"></td>
+              </tr>
+              <tr>
+                <td id="Id4"></td>
+                <td id="Description4"></td>
+                <td id="Price4"></td>
+                <td id="Quantity4"></td>
+                <td id="Be4"></td>
+              </tr>
+              <tr>
+                <td id="Id5"></td>
+                <td id="Description5"></td>
+                <td id="Price5"></td>
+                <td id="Quantity5"></td>
+                <td id="Be5"></td>
+              </tr>
+            </table>
+            <table id="the-services">
+              <tr>
+                  <caption>Javazon Services</caption>
+                <th>Service ID</th>
+                <th>Description</th>
+                <th>Hourly Rate</th>
+                <th>Minimum Billable Hours</th>
+              </tr>
+              <tr>
+                <td id="BeServiceID"></td>
+                <td id="BeServicesDescription"></td>
+                <td id="BeRate"></td>
+                <td id="BeMin"></td>
+              </tr>
+              <tr>
+                <td id="ServiceID2"></td>
+                <td id="ServicesDescription2"></td>
+                <td id="Rate2"></td>
+                <td id="Min2"></td>
+              </tr>
+              <tr>
+                <td id="ServiceID3"></td>
+                <td id="ServicesDescription3"></td>
+                <td id="Rate3"></td>
+                <td id="Min3"></td>
+              </tr>
+            </table>
+            <table id="the-employees">
+                <tr>
+                    <caption>Javazon Employees</caption>
+                  <th>Employee ID</th>
+                  <th>Last Name</th>
+                  <th>First Name</th>
+                  <th>Salary</th>
+                </tr>
+                <tr>
+                  <td id="BeEmployeeID"></td>
+                  <td id="BeLast"></td>
+                  <td id="BeFirst"></td>
+                  <td id="BeSalary"></td>
+                </tr>
+                <tr>
+                    <td id="EmployeeID2"></td>
+                    <td id="Last2"></td>
+                    <td id="First2"></td>
+                    <td id="Salary2"></td>
+                  </tr>
+                  <tr>
+                    <td id="EmployeeID3"></td>
+                    <td id="Last3"></td>
+                    <td id="First3"></td>
+                    <td id="Salary3"></td>
+                  </tr>
+                  <tr>
+                    <td id="EmployeeID4"></td>
+                    <td id="Last4"></td>
+                    <td id="First4"></td>
+                    <td id="Salary4"></td>
+                  </tr>
+                  <tr>
+                    <td id="EmployeeID5"></td>
+                    <td id="Last5"></td>
+                    <td id="First5"></td>
+                    <td id="Salary5"></td>
+                  </tr>
+                 
+    </body>
+</html>
