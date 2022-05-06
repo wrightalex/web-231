@@ -1,0 +1,54 @@
+<!--
+; Title: Assignment 8.2
+; Author: Alex Wright
+; Date: 2 May 2022
+; Modified By: -
+; Description: This program creates an alphabet game.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="wrightalphabet-game.css">
+        <script>
+            function School()  {                
+                var posElement = document.getElementById("txtPosition"); //inserts player's chosen letter
+                var pos = posElement.value   
+                const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M",
+                "N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+
+                
+                var alphabetResult = ""
+                for (let key in alphabet)  { 
+                    //grab letter in alphabet using key and store in variable
+                    let letter = alphabet[key]
+                    //append letter to alphabet result
+                    alphabetResult += letter + ", " 
+                }   
+                alphabetOutput = document.getElementById("AlphabetDiv"); //grabs string
+                alphabetOutput.innerHTML = alphabetResult.slice(0, -2) 
+                const letter = alphabet[pos-1]  
+                
+                if (letter == undefined)  {
+                    Message = document.getElementById("results"); //grabs string
+                    Message.innerHTML = `There are not ${pos} letters in the alphabet` //binds to results
+                } else { 
+                    Message2 = document.getElementById("results"); //grabs string
+                    Message2.innerHTML = `${letter} is at position ${pos} in the alphabet` //binds to results
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 class="app-header">Welcome to the Alphabet Game!</h1>
+        <h1 class="card-title">Alphabet Number Form</h1>
+        <label>Alphabet Letter Position</label>
+        <input class="input" id="txtPosition">
+        <button onclick=School() id="btnFindLetter">Find Letter</button>
+        <h1 id="AlphabetDiv">Letters in the Alphabet</h1>
+        <h1 id="results">Results</h1> 
+        <a href="https://wrightalex.github.io/web-231/ class="return-home">Return</a>
+    </body>
+    
+</html>
