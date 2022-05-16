@@ -1,0 +1,110 @@
+<!--
+; Title: Assignment 8.2
+; Author: Alex Wright
+; Date: 2 May 2022
+; Modified By: -
+; Description: This program creates a card game.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="card-game.css">
+<script>
+        class Card  {
+            constructor (face, suit)  {
+                this.face = face
+                this.suit = suit
+            }
+        }    
+        class Dealer  {
+            constructor ()  {
+                const CARD_COUNT = 52
+                let cards = []
+                const faces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+                const suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
+                this.CARD_COUNT = CARD_COUNT
+                this.cards = cards
+                this.faces = faces
+                this.suits = suits
+
+            self.getDeckOfCards()
+                  
+            }
+            getDeckOfCards()  {     //produces deck of cards
+                for (let count = 0; count < this.CARD_COUNT; count += 1)  {
+                    var suit = this.suits[Math.floor(count / 13)] 
+                    var face = this.faces[count % 13]
+                    var card = new Card (face, suit)
+                    this.cards.push(card)
+                }
+                return this.cards
+            }
+        }
+
+
+
+    const CARD_COUNT = 52
+    let cards = [""]
+    const faces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+    const suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
+    let cardOutputWithIcon = ""
+    //Function buildPlayingCard
+    function buildPlayingCard(card, suitIcon, faceColor, suitColor)  {      //This function will return a string with the following div 
+//1. Create a function named buildPlayingCard with four parameters: card, 
+//suitIcon, faceColor, and suitColor.
+//This function will return a string with the following div 
+//format: card > card-title > card-content > span
+// Use material design icons
+// add additional styling   
+    }
+
+
+//1. Call the shuffle() function.
+//2. Create a function named  
+//3. Using a for/of loop, iterate over the cards array (hint: dealer.cards) 
+//and use a switch expression on the suit (hint: card.suit) to compare the suit against the string values: Hearts, Diamonds, Clubs, Spades.
+//4. For “Hearts,” call the buildPlayerCard function passing in the card 
+//object, the heart icon class (mdi, mdi-heart), the string value red, and the string value red. Assign the results to cardOutputWithIcon string.  
+//5.For “Diamonds,” call the buildPlayerCard function passing in the card 
+//object, the diamond icon class (mdi, mdi-cards-diamonds), the string value red, and the string value red. Assign the results to the cardOutputWithIcon string 
+//6. For “Clubs,” call the buildPlayerCard function passing in the card 
+//object, the club icon class (mdi mid-cards-club), the string value black, and the string value black. Assign the results to the cardOutputWithIcon string 
+//7. For “Spades,” call the buildPlayerCard function passing in the card 
+//object, the spade icon class (mdi mid-card-spade), the string value black, and the string value black. Assign the results to the cardOutputWithIcon string . 
+//8. Outside of the body of the for/in bind the cardOutputWithIcon to 
+//the player-card-container div.
+let tempCard = this.cards[firstCard] //guesses
+function shuffle()  {
+    for (let count = 0; count < this.CARD_COUNT; count += 1) {
+    var secondCard = Math.floor(Math.random() * this.CARD_COUNT //generates random number
+    }
+    return this.cards
+}
+    
+//7)	Create a function named shuffle with no parameters.
+//i.	Add a for loop with 52 iterations (use the CARD_COUNT variable for this).
+
+//ii.	During each iteration, generate a random number (see the below 
+//random card expression) between 0 and 52 and assign it to a variable 
+//named secondCard. Find the first card in the cards array by using the 
+//for loop’s iteration variable (I named mine firstCard) and assign it 
+//to a variable named tempCard. Reorder the cards array by setting the 
+//current card to the secondCard and the second card to the tempCard    
+//iii.	Random card expression: Math.floor(Math.random() * this.CARD_COUNT)
+
+//Additional Programming Assistance
+//let tempCard = this.cards[firstCard];
+
+
+
+</script>
+    </head>
+    <body>
+<h1 class="app-header">Welcome to the Card Game!</h1>
+<h1>Card Dealer</h1>
+<h1>Shuffled Cards</h1></he>
+<button onclick=getDeckOfCards() id="btnDealCards">Deal Cards</button>
+<a href="https://wrightalex.github.io/web-231/" class="return-home">Return</a> 
+    </body>
+</html>
